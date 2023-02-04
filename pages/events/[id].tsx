@@ -23,9 +23,9 @@ export const getStaticPaths = () => {
   };
 };
 
-export const getStaticProps = (context) => {
+export const getStaticProps = (context: any) => {
   const selectedId = context.params.id;
-  const selected = eventDetail[selectedId];
+  const selected: any = (eventDetail as any)[selectedId] as any;
 
   return {
     props: {

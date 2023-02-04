@@ -19,7 +19,7 @@ const Blog: FC<IBlogType> = ({ blogItems = [] }) => {
 
 export default Blog;
 
-Blog.pageLayout = (page: ReactElement) => {
+(Blog as any).pageLayout = (page: ReactElement) => {
   return <BlogLayout>{page}</BlogLayout>;
 };
 
